@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tools 2060</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a1a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #e0e0ff;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background: linear-gradient(145deg, #1a1a2e, #0f0f20);
+            padding: 3rem 2rem;
+            border-radius: 30px;
+            border: 1px solid rgba(0, 200, 255, 0.3);
+            box-shadow: 0 0 50px rgba(0, 200, 255, 0.1);
+            max-width: 500px;
+        }
+        .logo {
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            background: linear-gradient(90deg, #00c8ff, #b400ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        p.subtitle {
+            color: #8888aa;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            align-items: center;
+        }
+        .menu a {
+            text-decoration: none;
+            width: 220px;
+            padding: 14px 0;
+            border-radius: 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: white;
+            background: linear-gradient(135deg, #0066cc, #6600cc);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+            display: block;
+        }
+        .menu a:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #0088ff, #8800ff);
+            box-shadow: 0 0 25px rgba(0, 150, 255, 0.5);
+        }
+        .about-btn {
+            background: transparent;
+            border: 1px solid #555;
+            color: #aaa;
+            margin-top: 2rem;
+            padding: 10px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .about-btn:hover {
+            border-color: #00c8ff;
+            color: #fff;
+        }
+        .modal {
+            display: none;
+            position: fixed; top:0; left:0; width:100%; height:100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+        .modal-content {
+            background: #1a1a2e;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #00c8ff;
+            max-width: 400px;
+        }
+        .close {
+            float: right;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <!-- Ícone SVG procedural embutido -->
+            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#00c8ff" stroke-width="3"/>
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#b400ff" stroke-width="1.5" stroke-dasharray="4 4"/>
+                <line x1="50" y1="50" x2="50" y2="20" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                <line x1="50" y1="50" x2="75" y2="50" stroke="#00c8ff" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="50" cy="50" r="5" fill="#ff0055"/>
+            </svg>
+        </div>
+        <h1>Time Tools 2060</h1>
+        <p class="subtitle">Gerencie o tempo com estilo futurista</p>
+        <div class="menu">
+            <a href="pages/cronometro/index.html">Cronômetro</a>
+            <a href="pages/temporizador/index.html">Temporizador</a>
+        </div>
+        <button class="about-btn" onclick="openAbout()">Sobre</button>
+    </div>
+
+    <!-- Modal Sobre -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAbout()">&times;</span>
+            <svg width="80" height="80" viewBox="0 0 100 100" style="margin-bottom:1rem;">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#00c8ff" stroke-width="3"/>
+                <line x1="50" y1="50" x2="50" y2="25" stroke="#fff" stroke-width="3"/>
+                <line x1="50" y1="50" x2="65" y2="60" stroke="#fff" stroke-width="2"/>
+                <circle cx="50" cy="50" r="4" fill="#ff0055"/>
+            </svg>
+            <h2>Sobre</h2>
+            <p style="color:#ccc;">Temporizador & Cronômetro com design 2060.</p>
+            <p style="color:#888;">Ícone gerado por código SVG.</p>
+            <p style="color:#888;">Versão 1.0 – HTML/CSS/JS puro.</p>
+        </div>
+    </div>
+
+    <script>
+        function openAbout() { document.getElementById('aboutModal').style.display='flex'; }
+        function closeAbout() { document.getElementById('aboutModal').style.display='none'; }
+        window.onclick = function(event) {
+            let modal = document.getElementById('aboutModal');
+            if (event.target == modal) modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

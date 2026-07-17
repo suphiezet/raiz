@@ -1,0 +1,37 @@
+Temporizador & Cronômetro 2060
+================================
+
+Ferramentas de tempo com design futurista e animações suaves.
+
+Funcionalidades:
+- Cronômetro progressivo com barra circular animada (canvas).
+- Temporizador regressivo com entrada de horas/minutos/segundos.
+- Barras de progresso circulares com gradientes neon.
+- Botões arredondados com efeitos hover e sombras.
+- Ícone procedural SVG (sem dependências externas).
+- Modal "Sobre" com informações do projeto.
+
+Tecnologias:
+HTML5, CSS3 (gradientes, backdrop-filter), JavaScript (Canvas API).
+
+Como usar:
+1. Abra a pasta do projeto no VS Code.
+2. Instale a extensão Live Server.
+3. Clique com o botão direito no index.html e escolha "Open with Live Server".
+4. Ou use o comando: npx serve . (no terminal, dentro da pasta do projeto).
+5. Acesse http://localhost:3000 (ou a porta indicada).
+
+Estrutura:
+/raiz
+├── index.html              (boas-vindas)
+├── pages/
+│   ├── cronometro/
+│   │   ├── index.html
+│   │   ├── style.css
+│   │   └── script.js
+│   └── temporizador/
+│       ├── index.html
+│       ├── style.css
+│       └── script.js
+
+Desenvolvido por ZettaDev
